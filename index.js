@@ -41,7 +41,8 @@ async function registerBigToken(email, referral) {
                 password: "Lolipop1902@",
                 referral_id: referral,
                 monetize: 1
-            }
+            },
+            simple: false
         });
         return cURL;
     } catch(err) {
