@@ -92,7 +92,7 @@ async function registerBigToken(email, referral) {
         }
         console.log(`[!] Email : ${doGetData.email}@${emailVerified}`);
         const doRegister = await registerBigToken(doGetData.email+`@${emailVerified}`, qx.referral);
-        if(doRegister.indexOf('user_id') > -1 || doRegister != "") {
+        if(doRegister.indexOf('user_id') > -1 && doRegister != "") {
             console.log(`[!] Register success, reading email.`);
 
             let dapet = true;
@@ -155,13 +155,13 @@ async function registerBigToken(email, referral) {
                         console.log(`${err}`);
                     }
                 } else {
-                    console.log(`[!] Gagal vefifikasi.`);
+                    console.log(`[!] Gagal vefifikasi.\n`);
                 }
             } catch(err) {
                 console.log(err);
             }
         } else {
-            console.log(`[?] Failed to register. ${doGetData.email}@${emailVerified}`);
+            console.log(`[?] Failed to register. ${doGetData.email}@${emailVerified}\n`);
         }
     }
 })();
