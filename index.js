@@ -163,7 +163,7 @@ async function registerBigToken(email, referral) {
             }
         } else {
             console.log(`[?] Failed to register. ${doGetData.email}@${emailVerified}\n`);
-            await delay(3000);
+            await delay(20000);
         }
     }
 })();
